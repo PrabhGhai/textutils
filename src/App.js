@@ -4,7 +4,7 @@ import TextForm from './components/TextForm';
 import About from './components/About';
 import React, { useState } from 'react';
 import {
-  HashRouter ,
+  BrowserRouter ,
   Routes,
   Route,
   Link
@@ -28,19 +28,19 @@ function App() {
   }
   return (
     <>
-      <HashRouter >
+      <BrowserRouter >
       <Navbar title="TextUtils" mode={mode} toggle={toggle} toggleText={toggleText}/>
       
       <div className='container my-3'>
         <Routes>
             <Route exact path="/about" element={<About  mode={mode} />}> 
             </Route>
-            <Route exact path="/" element={ <TextForm heading = "Enter the text to analyze" mode={mode} />}>
+            <Route exact path="/textutils" element={ <TextForm heading = "Enter the text to analyze" mode={mode} />}>
            
             </Route>
           </Routes>
       </div>
-      </HashRouter >
+      </BrowserRouter >
      
     </>
     
