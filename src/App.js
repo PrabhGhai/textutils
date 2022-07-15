@@ -4,7 +4,7 @@ import TextForm from './components/TextForm';
 import About from './components/About';
 import React, { useState } from 'react';
 import {
-  BrowserRouter,
+  HashRouter ,
   Routes,
   Route,
   Link
@@ -28,7 +28,7 @@ function App() {
   }
   return (
     <>
-      <BrowserRouter>
+      <HashRouter >
       <Navbar title="TextUtils" mode={mode} toggle={toggle} toggleText={toggleText}/>
       
       <div className='container my-3'>
@@ -40,7 +40,7 @@ function App() {
             </Route>
           </Routes>
       </div>
-      </BrowserRouter>
+      </HashRouter >
      
     </>
     
